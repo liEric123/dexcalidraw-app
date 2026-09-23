@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  background: #faf9f7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide Excalidraw UI chrome in view mode and the single presentation canvas */
+.excalidraw.excalidraw--view-mode .layer-ui__wrapper,
+.presentation-canvas .layer-ui__wrapper {
+  display: none !important;
+}
+
+/* Hide the hamburger / main-menu button: we have our own controls in the TopBar */
+.excalidraw .App-menu_top > *:first-child {
+  display: none !important;
+}
+
+/* Hide the "To move canvas, hold mouse wheel…" hint */
+.excalidraw .HintViewer {
+  display: none !important;
+}
